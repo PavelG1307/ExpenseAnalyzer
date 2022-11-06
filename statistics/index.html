@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Анализ расходов</title>
-  <link rel="stylesheet" type= "text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
   <script src="../assets/js/axios.min.js"></script>
   <script defer src="./scripts.js"></script>
   <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
@@ -14,8 +14,20 @@
 <body>
   <div class="container">
     <div class="main">
-      <div class="ct-chart ct-perfect-fourth"></div>
-      <div class="ct-chart2 ct-perfect-fourth"></div>
+      <!-- <div class="ct-chart ct-perfect-fourth"></div> -->
+      <table class="zebra">
+        <tr>
+          <th></th>
+          <th>Цена</th>
+          <th>ЧП</th>
+          <th>Доход</th>
+          <th>Тип</th>
+        </tr>
+      </table>
+    </div>
+    <div class="info">
+      <div id="balanceDay">Баланс на сегодня: 300 руб.</div>
+      <div id="balance">У вас осталось 1000 руб. до 1 декабря</div>
     </div>
     <div class="menu">
       <img class="menu_btn" id="" src="../assets/jpg/home.png">

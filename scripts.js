@@ -1,5 +1,6 @@
 const page = 'main'
-const url = 'http:/localhost:8080'
+const url = 'http://localhost:8080/api'
+const token = 'sdfhjadsjkdfhkjashjdhafjahjfkshj'
 const buttons = document.getElementsByClassName('menu_btn')
 for (const i in buttons){
     buttons[i].onclick = (ev) => {
@@ -9,13 +10,16 @@ for (const i in buttons){
     }
 }
 
-document.getElementById('save').addEventListener('ckick', async () => {
-    const summ = document.getElementById('summ').value
-    const emergency = document.getElementById('chp').checked
+document.getElementById('save').addEventListener('click', async () => {
+    const value = Number(document.getElementById('summ').value)
+    const unexpected = document.getElementById('unexpected').checked
+    const profit = document.getElementById('profit').checked
     const comment = document.getElementById('comment').value
+    const type = 1
+    console.log({ value, unexpected, comment, profit, type })
     const res = await axios({
         method: 'post',
         url,
-        data: { summ, emergency, comment }
+        data: { value, unexpected, comment, profit, type }
     })
 })

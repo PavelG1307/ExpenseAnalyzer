@@ -54,10 +54,10 @@
     margin-bottom: 10%;
 }
 
-#chp {
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
+.check {
+    height: 100px !important;
+    width: 100px !important;
+    border-radius: 100px;
     vertical-align: middle;
     border: 1px solid #ddd;
     appearance: none;
@@ -65,10 +65,10 @@
     outline: none;
     cursor: pointer;
     margin-right: 10%;
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
 }
 
-#chp:checked {
+.check:checked {
     background-color: gray;
 }
 
